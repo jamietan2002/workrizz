@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Feather } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
 import NavBar from "../components/NavBar";
+import TopBar from "../components/TopBar";
 
 export default function HomePage({ navigation }) {
   const [email, setEmail] = useState("");
@@ -14,6 +15,7 @@ export default function HomePage({ navigation }) {
 
   return (
     <SafeAreaView style={styles.container}>
+    <View><TopBar></TopBar></View>
       <View style={styles.content}>
         <Text>Home Page</Text>
       </View>
