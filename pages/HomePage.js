@@ -2,6 +2,7 @@ import { SafeAreaView, Text, StyleSheet, View, TextInput, TouchableOpacity, Stat
 import { useState } from "react";
 import { Feather } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
+import NavBar from "../components/NavBar";
 
 export default function HomePage({ navigation }) {
   const [email, setEmail] = useState("");
@@ -13,93 +14,35 @@ export default function HomePage({ navigation }) {
 
   return (
     <SafeAreaView style={styles.container}>
-      <View>home page</View>
+      <View style={styles.content}>
+        <Text>Home Page</Text>
+      </View>
+      <View style={styles.bottomNavBar}>
+        <NavBar navigation={navigation} />
+      </View>
     </SafeAreaView>
   );
 }
 
+
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: "column",
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  logo: {
-    height: 100,
-    width: 100,
-    marginVertical: 20,
-    
-  },
-  title: {
-    flex: 1,
-    fontSize: 25,
-    fontWeight: "bold",
-    alignSelf: "flex-start",
-    marginLeft: 20,
-  },
-  optionsBar: {
-    flex: 1,
-    flexDirection: "row",
-    justifyContent: "flex-end",
-    width: "90%",
-    margin: 10,
-  },
-  inputIcon: {
-    flex: 1,
-    alignSelf: "center",
-  },
-  inputBox: {
-    flex: 1,
-    flexDirection: "row",
-    borderBottomColor: "grey",
-    borderBottomWidth: 1,
-    borderRadius: 10,
-    padding: 10,
-    color: "grey",
-    margin: 10,
-  },
-  inputText: {
-    flex: 9,
-    alignSelf: "center",
-    color: "grey",
-  },
-  showButton: {
-    flex: 1,
-    alignSelf: "center",
-  },
-  buttonContainer: {
-    flex: 2,
-    margin: 10,
-    width: "90%",
-  },
-  gradient: {
-    paddingVertical: 15,
-    paddingHorizontal: 100,
-    borderRadius: 10,
-  },
-  buttonText: {
-    color: "#fff",
-    fontSize: 16,
-    fontWeight: "bold",
-    alignSelf: "center",
-  },
-  emptySection: {
-    flex: 4,
-  },
-  signUpSection: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    flexDirection: "row",
-  },
-  brand: {
-    fontSize: 25,
-    color: "green",
-    justifyContent: "center",
-    fontWeight: "bold",
-    height: 30,
-    marginBottom: 50,
-  }
-});
+    container: {
+      flex: 1,
+      backgroundColor: "#fff",
+    },
+    content: {
+      flex: 1,
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    // bottomNavBar: {
+    //   height: 60, // Set the desired height for the bottom navigation bar
+    //   borderTopWidth: 1,
+    //   borderTopColor: "black",
+    //   backgroundColor: "#fff",
+    //   paddingHorizontal: 16,
+    //   paddingBottom: 10,
+    // },
+  });
+  
+  
