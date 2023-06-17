@@ -11,12 +11,13 @@ export default function App() {
     return (
         <NavigationContainer>
           <Stack.Navigator>
+          <Stack.Screen name="Home" options={{ headerShown: false }}>
+              {(props) => <HomePage {...props} />}
+            </Stack.Screen>
             <Stack.Screen name="Login" options={{ headerShown: false }}>
-              {(props) => <LoginPage {...props}/>}
+              {(props) => <LoginPage {...props} />}
             </Stack.Screen>
-            <Stack.Screen name="Home" options={{ headerShown: false }}>
-              {(props) => <HomePage {...props}/>}
-            </Stack.Screen>
+            
 
           </Stack.Navigator>
         </NavigationContainer>
